@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/RustedBl4de/cross-cloud/common/db"
+	"github.com/RustedBl4de/cross-cloud/pkg/common/db"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 )
