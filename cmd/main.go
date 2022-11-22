@@ -13,7 +13,6 @@ import (
 	_ "github.com/RustedBl4de/cross-cloud/cmd/docs"
 
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
 func main() {
@@ -26,7 +25,7 @@ func main() {
 	r := gin.Default()
 	db.Init(dbUrl)
 
-	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(ginSwagger.swaggerFiles.Handler))
 
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
